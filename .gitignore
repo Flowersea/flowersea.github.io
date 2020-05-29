@@ -1,0 +1,7 @@
+node_modules
+public
+db.json
+.DS_Store
+.vscode
+.deploy_git
+
