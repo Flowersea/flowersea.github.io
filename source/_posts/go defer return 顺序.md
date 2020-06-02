@@ -1,8 +1,8 @@
 ---
-title: Golang defer return 顺序
+title: go defer return 顺序
 date: 2020-06-02 14:43:01
-tags: Golang
-categories: Golang
+tags: go
+categories: go
 ---
 
 今天遇到了一道 defer 的题目。题目如下
