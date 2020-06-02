@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://flowersea.github.io/"/>
-  <updated>2020-06-02T11:28:08.844Z</updated>
+  <updated>2020-06-02T11:35:27.782Z</updated>
   <id>http://flowersea.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>go defer return 顺序</title>
-    <link href="http://flowersea.github.io/post/go-defer-return-shun-xu/"/>
-    <id>http://flowersea.github.io/post/go-defer-return-shun-xu/</id>
+    <title>go defer</title>
+    <link href="http://flowersea.github.io/post/go-defer/"/>
+    <id>http://flowersea.github.io/post/go-defer/</id>
     <published>2020-06-02T06:43:01.000Z</published>
-    <updated>2020-06-02T11:28:08.844Z</updated>
+    <updated>2020-06-02T11:35:27.782Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;今天遇到了一道 defer 的题目。题目如下&lt;/p&gt;
+          &lt;p&gt;遇到了一道 defer 的题目。题目如下&lt;/p&gt;
 &lt;pre class=&quot; language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; main
 
 &lt;span
