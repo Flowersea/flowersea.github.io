@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://flowersea.github.io/"/>
-  <updated>2020-06-02T09:20:44.507Z</updated>
+  <updated>2020-06-02T11:22:10.442Z</updated>
   <id>http://flowersea.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://flowersea.github.io/post/go-defer-return-shun-xu/"/>
     <id>http://flowersea.github.io/post/go-defer-return-shun-xu/</id>
     <published>2020-06-02T06:43:01.000Z</published>
-    <updated>2020-06-02T09:20:44.507Z</updated>
+    <updated>2020-06-02T11:22:10.442Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,7 @@
     <link href="http://flowersea.github.io/post/xin-de-kai-shi/"/>
     <id>http://flowersea.github.io/post/xin-de-kai-shi/</id>
     <published>2020-05-27T11:48:35.000Z</published>
-    <updated>2020-06-02T06:42:09.707Z</updated>
+    <updated>2020-06-02T11:22:19.780Z</updated>
     
     <summary type="html">
     
@@ -70,10 +70,10 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://flowersea.github.io/categories/Hexo/"/>
+      <category term="blog" scheme="http://flowersea.github.io/categories/blog/"/>
     
     
-      <category term="Hexo" scheme="http://flowersea.github.io/tags/Hexo/"/>
+      <category term="blog" scheme="http://flowersea.github.io/tags/blog/"/>
     
   </entry>
   
@@ -82,7 +82,7 @@
     <link href="http://flowersea.github.io/post/hello-world/"/>
     <id>http://flowersea.github.io/post/hello-world/</id>
     <published>2020-05-22T12:00:00.000Z</published>
-    <updated>2020-06-02T06:42:09.706Z</updated>
+    <updated>2020-06-02T11:21:36.494Z</updated>
     
     <summary type="html">
     
@@ -97,10 +97,10 @@
     </summary>
     
     
-      <category term="Hello World" scheme="http://flowersea.github.io/categories/Hello-World/"/>
+      <category term="hexo" scheme="http://flowersea.github.io/categories/hexo/"/>
     
     
-      <category term="Hello World" scheme="http://flowersea.github.io/tags/Hello-World/"/>
+      <category term="hexo" scheme="http://flowersea.github.io/tags/hexo/"/>
     
   </entry>
   
