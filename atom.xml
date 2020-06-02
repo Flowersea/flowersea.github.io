@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>花海</title>
+  
+  <subtitle>花海</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://flowersea.github.io/"/>
+  <updated>2020-06-02T09:16:12.921Z</updated>
+  <id>http://flowersea.github.io/</id>
+  
+  <author>
+    <name>花海</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Golang defer return 顺序</title>
+    <link href="http://flowersea.github.io/post/golang-defer-return-shun-xu/"/>
+    <id>http://flowersea.github.io/post/golang-defer-return-shun-xu/</id>
+    <published>2020-06-02T06:43:01.000Z</published>
+    <updated>2020-06-02T09:16:12.921Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天遇到了一道 defer 的题目。题目如下&lt;/p&gt;
+&lt;pre class=&quot; language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; main
+
+&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Golang" scheme="http://flowersea.github.io/categories/Golang/"/>
+    
+    
+      <category term="Golang" scheme="http://flowersea.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新的开始</title>
+    <link href="http://flowersea.github.io/post/xin-de-kai-shi/"/>
+    <id>http://flowersea.github.io/post/xin-de-kai-shi/</id>
+    <published>2020-05-27T11:48:35.000Z</published>
+    <updated>2020-06-02T06:42:09.707Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;网上流传的写博客的三个阶段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。&lt;/li&gt;
+&lt;li&gt;第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。&lt;/li&gt;
+&lt;li&gt;第三阶段，觉得独立博客的管理太麻烦，最好在保留控
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://flowersea.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://flowersea.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://flowersea.github.io/post/hello-world/"/>
+    <id>http://flowersea.github.io/post/hello-world/</id>
+    <published>2020-05-22T12:00:00.000Z</published>
+    <updated>2020-06-02T06:42:09.706Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hello World" scheme="http://flowersea.github.io/categories/Hello-World/"/>
+    
+    
+      <category term="Hello World" scheme="http://flowersea.github.io/tags/Hello-World/"/>
+    
+  </entry>
+  
+</feed>
