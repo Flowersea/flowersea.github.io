@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://flowersea.github.io/"/>
-  <updated>2020-06-02T09:16:12.921Z</updated>
+  <updated>2020-06-02T09:20:29.774Z</updated>
   <id>http://flowersea.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Golang defer return 顺序</title>
-    <link href="http://flowersea.github.io/post/golang-defer-return-shun-xu/"/>
-    <id>http://flowersea.github.io/post/golang-defer-return-shun-xu/</id>
+    <title>go defer return 顺序</title>
+    <link href="http://flowersea.github.io/post/go-defer-return-shun-xu/"/>
+    <id>http://flowersea.github.io/post/go-defer-return-shun-xu/</id>
     <published>2020-06-02T06:43:01.000Z</published>
-    <updated>2020-06-02T09:16:12.921Z</updated>
+    <updated>2020-06-02T09:20:29.774Z</updated>
     
     <summary type="html">
     
@@ -39,10 +39,10 @@
     </summary>
     
     
-      <category term="Golang" scheme="http://flowersea.github.io/categories/Golang/"/>
+      <category term="Go" scheme="http://flowersea.github.io/categories/Go/"/>
     
     
-      <category term="Golang" scheme="http://flowersea.github.io/tags/Golang/"/>
+      <category term="Go" scheme="http://flowersea.github.io/tags/Go/"/>
     
   </entry>
   
