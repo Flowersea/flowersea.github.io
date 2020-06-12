@@ -58,7 +58,7 @@ handleSizeChange(val) {
 handleCurrentChange(val) {
     this.table.currentPage = val;
     this.$table.handleTableChange(this.table);
-}
+},
 ```
 
 ### 2.2. table.js
@@ -80,8 +80,8 @@ export function getFilters(data, name) {
         filters.push({ text: element, value: element });
     });
     return filters;
-}
- 
+};
+
 export function handleTableChange(table) {
     let data = [];
     table.data.forEach(element => {
@@ -116,7 +116,7 @@ export function handleTableChange(table) {
     }
     table.total = data.length;
     table.pageData = data.slice((table.currentPage - 1) * table.pageSize, table.currentPage * table.pageSize);
-}
+};
 ```
 
 ## 3. 表格属性
