@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 花海">
+    <meta name="keywords" content="Element UI 表格分页排序筛选, 花海">
     <meta name="description" content="呐，你想变成什么颜色？">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 花海</title>
+    <title>Element UI 表格分页排序筛选 | 花海</title>
     <link rel="icon" type="image/jpeg" href="/medias/avatar.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -202,12 +202,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Element UI 表格分页排序筛选</h1>
                 </div>
             </div>
         </div>
@@ -324,8 +324,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
+                            </a>
+                        
+                            <a href="/tags/element-ui/">
+                                <span class="chip bg-color">element-ui</span>
                             </a>
                         
                     </div>
@@ -336,8 +340,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/hexo/" class="post-category">
-                                hexo
+                            <a href="/categories/vue/" class="post-category">
+                                vue
                             </a>
                         
                     </div>
@@ -349,7 +353,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-22
+                    2020-06-12
                 </div>
                 
 
@@ -358,14 +362,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    69
+                    520
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -380,15 +384,112 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <p>Element UI表格有自带的排序和筛选功能，但是只能排序和筛选当前页。</p>
+<p>如果涉及到分页，官方的推荐做法是后台排序筛选，但是如果后台真的一次返回所有数据，那就需要前台分页筛选了。</p>
+<p>官网也提供了自定义筛选和自定义排序的方法。<a href="https://element.eleme.cn/#/zh-CN/component/table" target="_blank" rel="noopener">https://element.eleme.cn/#/zh-CN/component/table</a></p>
+<p>下面介绍分页排序和筛选的方法</p>
+<h2 id="1-数据"><a href="#1-数据" class="headerlink" title="1. 数据"></a>1. 数据</h2><pre class=" language-js"><code class="language-js">table<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>           <span class="token comment" spellcheck="true">// 表格原始数据</span>
+    pageData<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>       <span class="token comment" spellcheck="true">// 分页后的数据</span>
+    sort<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>           <span class="token comment" spellcheck="true">// 排序的内容，只会有一个或没有</span>
+    filters<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">// 过滤的内容，可以有多个</span>
+    currentPage<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">// 当前页</span>
+    pageSize<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>       <span class="token comment" spellcheck="true">// 每页的条数</span>
+    total<span class="token punctuation">:</span> <span class="token number">0</span>            <span class="token comment" spellcheck="true">// 过滤和排序后的数据的总量</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="2-方法"><a href="#2-方法" class="headerlink" title="2. 方法"></a>2. 方法</h2><h3 id="2-1-vue-中的-methods"><a href="#2-1-vue-中的-methods" class="headerlink" title="2.1. vue 中的 methods"></a>2.1. vue 中的 methods</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 获取当前列的筛选内容</span>
+<span class="token function">getFilters</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$table<span class="token punctuation">.</span><span class="token function">getFilters</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">.</span>data<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment" spellcheck="true">// 处理筛选条件变化</span>
+<span class="token function">handleFilterChange</span><span class="token punctuation">(</span>filter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> key <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>filter<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">.</span>filters<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> filter<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">.</span>currentPage <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$table<span class="token punctuation">.</span><span class="token function">handleTableChange</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment" spellcheck="true">// 处理排序条件变化</span>
+<span class="token function">handleSortChange</span><span class="token punctuation">(</span><span class="token punctuation">{</span> column<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> order <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">.</span>sort <span class="token operator">=</span> <span class="token punctuation">{</span> prop<span class="token punctuation">:</span> prop<span class="token punctuation">,</span> order<span class="token punctuation">:</span> order <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$table<span class="token punctuation">.</span><span class="token function">handleTableChange</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment" spellcheck="true">// 处理分页条数变化</span>
+<span class="token function">handleSizeChange</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">.</span>pageSize <span class="token operator">=</span> val<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$table<span class="token punctuation">.</span><span class="token function">handleTableChange</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment" spellcheck="true">// 处理当前页变化</span>
+<span class="token function">handleCurrentChange</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">.</span>currentPage <span class="token operator">=</span> val<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$table<span class="token punctuation">.</span><span class="token function">handleTableChange</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>table<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="2-2-table-js"><a href="#2-2-table-js" class="headerlink" title="2.2. table.js"></a>2.2. table.js</h3><p>封装了表格相关的函数</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getFilters</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>element <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        list<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>element<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> filters <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    list<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>element <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        filters<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token punctuation">:</span> element<span class="token punctuation">,</span> value<span class="token punctuation">:</span> element <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> filters<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">handleTableChange</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    table<span class="token punctuation">.</span>data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>element <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> table<span class="token punctuation">.</span>filters<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>table<span class="token punctuation">.</span>filters<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">let</span> <span class="token keyword">set</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span>filters<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">set</span><span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>element<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            data<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>order <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>order <span class="token operator">==</span> <span class="token string">"ascending"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>prop<span class="token punctuation">]</span> <span class="token operator">></span> b<span class="token punctuation">[</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>order <span class="token operator">==</span> <span class="token string">"descending"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>prop<span class="token punctuation">]</span> <span class="token operator">&lt;</span> b<span class="token punctuation">[</span>table<span class="token punctuation">.</span>sort<span class="token punctuation">.</span>prop<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    table<span class="token punctuation">.</span>total <span class="token operator">=</span> data<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    table<span class="token punctuation">.</span>pageData <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token punctuation">(</span>table<span class="token punctuation">.</span>currentPage <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> table<span class="token punctuation">.</span>pageSize<span class="token punctuation">,</span> table<span class="token punctuation">.</span>currentPage <span class="token operator">*</span> table<span class="token punctuation">.</span>pageSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="3-表格属性"><a href="#3-表格属性" class="headerlink" title="3. 表格属性"></a>3. 表格属性</h2><h3 id="3-1-el-table"><a href="#3-1-el-table" class="headerlink" title="3.1. el-table"></a>3.1. el-table</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-table</span>
+    <span class="token attr-name">:data</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pageData<span class="token punctuation">"</span></span>
+    <span class="token attr-name">border</span>
+    <span class="token attr-name">@filter-change</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleFilterChange<span class="token punctuation">"</span></span>
+    <span class="token attr-name">@sort-change</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>handleSortChange<span class="token punctuation">"</span></span>
+    <span class="token attr-name">:header-cell-</span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">headerCellStyle</span><span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span></code></pre>
+<h3 id="3-2-el-table-column"><a href="#3-2-el-table-column" class="headerlink" title="3.2. el-table-column"></a>3.2. el-table-column</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-table-column</span>
+    <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>time<span class="token punctuation">"</span></span>
+    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>时间<span class="token punctuation">"</span></span>
+    <span class="token attr-name">column-key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>time<span class="token punctuation">"</span></span>
+    <span class="token attr-name">:filters</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>getFilters(<span class="token punctuation">'</span>time<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span>
+    <span class="token attr-name">filter-placement</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bottom-start<span class="token punctuation">"</span></span>
+    <span class="token attr-name">sortable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>custom<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table-column</span><span class="token punctuation">></span></span></code></pre>
 
             </div>
             <hr/>
@@ -414,7 +515,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://flowersea.github.io/post/hello-world/">http://flowersea.github.io/post/hello-world/</a>
+                    <a href="http://flowersea.github.io/post/element-ui-biao-ge-fen-ye-pai-xu-shai-xuan/">http://flowersea.github.io/post/element-ui-biao-ge-fen-ye-pai-xu-shai-xuan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -452,8 +553,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
+                                </a>
+                            
+                                <a href="/tags/element-ui/">
+                                    <span class="chip bg-color">element-ui</span>
                                 </a>
                             
                         </div>
@@ -621,50 +726,54 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/post/xin-de-kai-shi/">
+                <a href="/post/element-ui-biao-ge-fen-ye-pai-xu-shai-xuan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="新的开始">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Element UI 表格分页排序筛选">
                         
-                        <span class="card-title">新的开始</span>
+                        <span class="card-title">Element UI 表格分页排序筛选</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网上流传的写博客的三个阶段
-
-第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。
-第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。
-第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，
+                            Element UI表格有自带的排序和筛选功能，但是只能排序和筛选当前页。
+如果涉及到分页，官方的推荐做法是后台排序筛选，但是如果后台真的一次返回所有数据，那就需要前台分页筛选了。
+官网也提供了自定义筛选和自定义排序的方法。https://
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                    <a href="/tags/element-ui/">
+                        <span class="chip bg-color">element-ui</span>
                     </a>
                     
                 </div>
@@ -675,46 +784,54 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/post/hello-world/">
+                <a href="/post/go-defer/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="go defer">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">go defer</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            遇到了一道 defer 的题目。题目如下
+package main
+
+import "fmt"
+
+func test() (i int) {
+    defer func() {
+        i++
+    }()
+    return
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/go/" class="post-category">
+                                    go
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/go/">
+                        <span class="chip bg-color">go</span>
                     </a>
                     
                 </div>
