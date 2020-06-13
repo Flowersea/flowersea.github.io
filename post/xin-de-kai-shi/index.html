@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="花海" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -314,7 +315,7 @@
     }
 </style>
 <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
+    <div id="main-content" class="col s12 m12">
         <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
@@ -392,13 +393,13 @@
 <h2 id="Hexo-搭建流程"><a href="#Hexo-搭建流程" class="headerlink" title="Hexo 搭建流程"></a>Hexo 搭建流程</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p>在 github 上新建一个仓库，仓库名为 <code>flowersea.GitHub.io</code>，然后 clone 到本地。</p>
 <h3 id="使用-hexo"><a href="#使用-hexo" class="headerlink" title="使用 hexo"></a>使用 hexo</h3><p>安装 nodejs 和 hexo 之后，在任意一个地方新建一个 demo。然后把文件拷贝到仓库中。具体可参考 hexo <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>。</p>
 <h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><p>因为现在 github pages 强制使用 master 分支，所以使用 develop 分支开发，修改 _config.yml 文件，配置发布仓库和分支，然后就能执行发布了。</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
   <span class="token key atrule">type</span><span class="token punctuation">:</span> git
   <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>Flowersea/flowersea.github.io.git
   <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h3><p>克隆 matery 主题到 themes 文件夹下，修改 _config.yml 文件中的主题就可以了。</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span> hexo<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>matery</code></pre>
+<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span> hexo<span class="token punctuation">-</span>theme<span class="token punctuation">-</span>matery<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h3 id="定制"><a href="#定制" class="headerlink" title="定制"></a>定制</h3><p>主要修改了名字、头像、子标题、颜色、描述、图标、横幅，背景，以及删除了一些不必要的功能。</p>
 <h3 id="使用域名"><a href="#使用域名" class="headerlink" title="使用域名"></a>使用域名</h3><p>在腾讯云买一个域名 <code>flowersea.love</code> ，然后配置 CNAME 。同时在 github pages 设置里也设置自定义域名。在网页上设置之后会自动在 master 分支中新建一个 CNAME 文件，但是重新发布会删除 CNAME 文件。解决办法是在开发分支中的 source 文件夹下新建一个 CNAME 文件，里面填写自己的域名，这样发布就不用重新配置了。</p>
 
@@ -771,7 +772,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
     </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+    <div id="toc-aside" class="col l3 hide-on-med-and-down" style="display: none;">
         <div class="toc-widget">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>

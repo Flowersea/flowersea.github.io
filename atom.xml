@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://flowersea.github.io/"/>
-  <updated>2020-06-12T08:39:05.945Z</updated>
+  <updated>2020-06-12T08:42:16.618Z</updated>
   <id>http://flowersea.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://flowersea.github.io/post/element-ui-biao-ge-fen-ye-pai-xu-shai-xuan/"/>
     <id>http://flowersea.github.io/post/element-ui-biao-ge-fen-ye-pai-xu-shai-xuan/</id>
     <published>2020-06-12T03:50:15.000Z</published>
-    <updated>2020-06-12T08:39:05.945Z</updated>
+    <updated>2020-06-12T08:42:16.618Z</updated>
     
     <summary type="html">
     
@@ -61,9 +61,7 @@
         
         
           &lt;p&gt;遇到了一道 defer 的题目。题目如下&lt;/p&gt;
-&lt;pre class=&quot; language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; main
-
-&lt;span
+&lt;pre class=&quot;line-numbers language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt;
         
       
     

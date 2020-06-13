@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="花海" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -314,7 +315,7 @@
     }
 </style>
 <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
+    <div id="main-content" class="col s12 m12">
         <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
@@ -381,7 +382,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>遇到了一道 defer 的题目。题目如下</p>
-<pre class=" language-go"><code class="language-go"><span class="token keyword">package</span> main
+<pre class="line-numbers language-go"><code class="language-go"><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token string">"fmt"</span>
 
@@ -402,7 +403,7 @@
 
 <span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>打印结果为：</p>
 <p><code>2 1</code></p>
 <p>原因主要参考下面的第3、4条。</p>
@@ -792,7 +793,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
     </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+    <div id="toc-aside" class="col l3 hide-on-med-and-down" style="display: none;">
         <div class="toc-widget">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
